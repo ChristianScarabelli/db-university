@@ -62,3 +62,11 @@ SELECT *
 FROM `teachers`
 WHERE `phone` IS NULL;
 ```
+
+### 09 Inserire nella tabella degli studenti un nuovo record con i propri dati (per il campo
+### degree_id, inserire un valore casuale)
+
+```SQL
+INSERT INTO `students` (`id`, `degree_id`, `name`, `surname`, `date_of_birth`, `fiscal_code`, `enrolment_date`, `registration_number`, `email`) 
+VALUES ('1001', '34', 'Christian', 'Scarabelli', '1993-06-24', 'SCRCRS93H24A944G', '2024-09-11', '678900', 'scachmabol@hotmail.it');
+```
