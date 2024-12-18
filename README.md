@@ -54,3 +54,11 @@ LIKE '%magistrale%';
 SELECT COUNT(*)
 FROM `departments`;
 ```
+
+### 08 Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
+
+```SQL
+SELECT *
+FROM `teachers`
+WHERE `phone` IS NULL;
+```
