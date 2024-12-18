@@ -47,3 +47,10 @@ FROM `degrees`
 WHERE `name`
 LIKE '%magistrale%';
 ```
+
+### 07 Da quanti dipartimenti è composta l'università? (12)
+
+```SQL
+SELECT COUNT(*)
+FROM `departments`;
+```
