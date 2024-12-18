@@ -6,3 +6,10 @@ FROM students
 WHERE YEAR(`date_of_birth`) = 1990;
 ```
 
+### Selezionare tutti i corsi che valgono più di 10 crediti (479)
+
+```SQL
+SELECT * 
+FROM `courses`
+WHERE `cfu` > 10
+```
