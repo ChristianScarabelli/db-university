@@ -70,3 +70,11 @@ WHERE `phone` IS NULL;
 INSERT INTO `students` (`id`, `degree_id`, `name`, `surname`, `date_of_birth`, `fiscal_code`, `enrolment_date`, `registration_number`, `email`) 
 VALUES ('1001', '34', 'Christian', 'Scarabelli', '1993-06-24', 'SCRCRS93H24A944G', '2024-09-11', '678900', 'scachmabol@hotmail.it');
 ```
+
+### 10 Cambiare il numero dell’ufficio del professor Pietro Rizzo in 126
+
+```SQL
+UPDATE `teachers` 
+SET `office_number` = 126 
+WHERE `surname` LIKE 'Rizzo';
+```
