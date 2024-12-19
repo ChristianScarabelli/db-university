@@ -43,9 +43,9 @@ HOUR(`hour`) >= 14;
 ### 06 Selezionare tutti i corsi di laurea magistrale (38)
 
 ```SQL
-SELECT * 
-FROM `degrees`
-WHERE `level` = 'magistrale';
+SELECT COUNT(*) AS total_magistrale_courses 
+FROM degrees 
+WHERE level = 'magistrale'; 
 ```
 
 ### 07 Da quanti dipartimenti è composta l'università? (12)
