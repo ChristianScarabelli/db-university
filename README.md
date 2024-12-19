@@ -36,7 +36,8 @@ WHERE `period` = 'I semestre' AND `year` = 1;
 ```SQL
 SELECT * 
 FROM `exams`
-WHERE `date` = '2020-06-20' AND `hour` > '14:00';
+WHERE `date` = '2020-06-20' AND 
+HOUR(`hour`) >= 14;
 ```
 
 ### 06 Selezionare tutti i corsi di laurea magistrale (38)
@@ -44,14 +45,13 @@ WHERE `date` = '2020-06-20' AND `hour` > '14:00';
 ```SQL
 SELECT * 
 FROM `degrees`
-WHERE `name`
-LIKE '%magistrale%';
+WHERE `level` = 'magistrale';
 ```
 
 ### 07 Da quanti dipartimenti è composta l'università? (12)
 
 ```SQL
-SELECT COUNT(*)
+SELECT COUNT(*) 
 FROM `departments`;
 ```
 
@@ -67,8 +67,8 @@ WHERE `phone` IS NULL;
 ### degree_id, inserire un valore casuale)
 
 ```SQL
-INSERT INTO `students` (`id`, `degree_id`, `name`, `surname`, `date_of_birth`, `fiscal_code`, `enrolment_date`, `registration_number`, `email`) 
-VALUES ('1001', '34', 'Christian', 'Scarabelli', '1993-06-24', 'SCRCRS93H24A944G', '2024-09-11', '678900', 'scachmabol@hotmail.it');
+INSERT INTO `students` (`degree_id`, `name`, `surname`, `date_of_birth`, `fiscal_code`, `enrolment_date`, `registration_number`, `email`) 
+VALUES ('34', 'Christian', 'Scarabelli', '1993-06-24', 'SCRCRS93H24A944G', '2024-09-11', '678900', 'scachmabol@hotmail.it');
 ```
 
 ### 10 Cambiare il numero dell’ufficio del professor Pietro Rizzo in 126
